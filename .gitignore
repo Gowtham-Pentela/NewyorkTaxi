@@ -1,0 +1,9 @@
+nyc_trips.db
+data/clean_trip_data.csv/
+data/test_output/
+.git/objects/1a/54a625aa2fa04a2941b6f454ce027b145c8e60
+.git/objects/63/72b46cb39ee6ac10cd67a8484c49bdbe9be621
+data/yellow_tripdata_2023-01.parquet
+data/test_output/part-00000-b8bd5e3c-76a6-436c-80bb-e7bafb68f681-c000.csv
+data/clean_trip_data.csv/part-00000-f61d8ca3-5011-4f34-945a-514ca826717d-c000.csv
+size_check.py
