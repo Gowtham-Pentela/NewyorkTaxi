@@ -30,8 +30,8 @@ pipeline {
 
         stage('Run Pipeline') {
             when {
-                not {
-                    failed()
+                expression {
+                    currentBuild.result != 'FAILURE'
                 }
             }
             steps {
