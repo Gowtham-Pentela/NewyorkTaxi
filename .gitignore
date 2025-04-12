@@ -7,3 +7,4 @@ data/yellow_tripdata_2023-01.parquet
 data/test_output/part-00000-b8bd5e3c-76a6-436c-80bb-e7bafb68f681-c000.csv
 data/clean_trip_data.csv/part-00000-f61d8ca3-5011-4f34-945a-514ca826717d-c000.csv
 size_check.py
+data/clean_trip_data.csv/part-00000-18ce4b81-7cd0-4d7e-9f0d-0031258d74b8-c000.csv
