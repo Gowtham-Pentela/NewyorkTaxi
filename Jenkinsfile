@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    environment {
+        PYTHONPATH = "${WORKSPACE}" // Add the workspace root to PYTHONPATH
+    }
+
     stages {
         stage('Checkout') {
             steps {
