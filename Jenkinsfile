@@ -17,6 +17,8 @@ pipeline {
 
         stage('Run Tests') {
             steps {
+                // Download the dataset before testing
+                sh './$VENV_PATH/bin/python pipeline/extract.py'
                 sh './$VENV_PATH/bin/pytest tests/'
             }
         }
