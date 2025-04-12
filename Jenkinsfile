@@ -3,24 +3,27 @@ pipeline {
 
     environment {
         PYTHONPATH = '.'
+        VENV_PATH = 'venv'
     }
 
     stages {
-        stage('Install Dependencies') {
+        stage('Set Up Virtual Environment') {
             steps {
-                sh 'pip3 install -r requirements.txt'
+                sh 'python3 -m venv $VENV_PATH'
+                sh './$VENV_PATH/bin/pip install --upgrade pip'
+                sh './$VENV_PATH/bin/pip install -r requirements.txt'
             }
         }
 
         stage('Run Tests') {
             steps {
-                sh 'pytest tests/'
+                sh './$VENV_PATH/bin/pytest tests/'
             }
         }
 
         stage('Run Pipeline') {
             steps {
-                sh 'python3 pipeline/main.py'
+                sh './$VENV_PATH/bin/python pipeline/main.py'
             }
         }
     }
