@@ -16,6 +16,12 @@ pipeline {
             }
         }
 
+        stage('Prepare Data Directory') {
+            steps {
+                sh 'mkdir -p data' // Create the 'data' directory if it doesn't exist
+            }
+        }
+
         stage('Download Data') {
             steps {
                 sh './venv/bin/python -c "import requests; url=\'https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2023-01.parquet\'; r=requests.get(url); open(\'data/yellow_tripdata_2023-01.parquet\', \'wb\').write(r.content)"'
